@@ -1,3 +1,4 @@
+% Step1
 clearvars
 close all
 % 载入刀具图片并处理成二维点云
@@ -14,7 +15,7 @@ I2_canny = imread([target_fold, 'match_edge_', new_name, '.bmp']);
 % 密集点云 - match_edge_前缀的图片是 photoshop 输出的，虽然在图片查看器
 % 中是黑底白色边缘，但是在MATLAB中却变成了白底黑色边缘。
 % 所以此时找的是 ==0 的点，而非1
-[idx1_y, idx1_x] = find(I1_canny == 0);
+[idx1_y, idx1_x] = find(I1_canny == 0); % 这里行对应y，列对应x
 [idx2_y, idx2_x] = find(I2_canny == 0);
 
 % 稀疏点云

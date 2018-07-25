@@ -1,6 +1,7 @@
 clearvars
 % 预处理
-% 找到一个文件夹下的所有bmp图片，进行边缘检测后，加edge_前缀输出
+% 找到一个文件夹下的所有bmp图片，进行边缘检测后，加edge_前缀输出，只执行一次就可以了
+% 否则在原文件夹下会处理越来越多的文件，且有可能报错
 
 image_dir = 'C:\Users\jiajun\Documents\MyNutCloud\008-LaserKnife\005-QC_Based_On_Image_Match\01-Image_Data\刀具检测图片0724';
 image_files = dir([image_dir,'\*.bmp']);
